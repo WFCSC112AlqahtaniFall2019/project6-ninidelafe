@@ -2,6 +2,7 @@
 using namespace std;
 
 int binarySearch(vector<int> a, int item, int low, int high) {
+   
     if (high <= low) {
         return (item > a[low] ? (low + 1) : low);
     }
