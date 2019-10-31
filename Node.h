@@ -10,8 +10,9 @@ public:
         value = v;
         next = n;
     }
-private:
+    friend class LinkedList;
 
+private:
     int value;
     Node* next;
 
