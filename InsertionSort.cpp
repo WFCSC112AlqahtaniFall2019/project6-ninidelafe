@@ -26,7 +26,7 @@ int main() {
     LinkedList L = LinkedList();
 
     // generate vector of random integers
-    for (int i = 0; i < v.size(); i++) {
+    for (int i = 0; i < length; i++) {
         v[i] = rand() % 100;
     }
 
@@ -76,10 +76,8 @@ int main() {
     L.printList();
 
     //allows us to see the time in a more readable way
-    double elapsed_binaryInsertionSort =
-            double(end_binaryInsertionSort - start_binaryInsertionSort) / CLOCKS_PER_SEC;
-    double elapsed_linkedListInsertionSort =
-            double(end_linkedListInsertionSort - start_linkedListInsertionSort) / CLOCKS_PER_SEC;
+    double elapsed_binaryInsertionSort = double(end_binaryInsertionSort - start_binaryInsertionSort) / CLOCKS_PER_SEC;
+    double elapsed_linkedListInsertionSort = double(end_linkedListInsertionSort - start_linkedListInsertionSort) / CLOCKS_PER_SEC;
 
     //Outputs length and times for binary search and insertion sort for graphing and comparison
     //cout << length << " " << elapsed_binaryInsertionSort << " " << elapsed_linkedListInsertionSort << endl;

@@ -98,15 +98,19 @@ void LinkedList::printList() {
     cout << endl;
 }
 
-//Sorts the linked list to be in increasing order, created in attempt to follow the psuedocode given the description
+//Sorts the linked list to be in increasing order, created in an attempt to follow the psuedocode given in the project description
 void LinkedList::insertionSort() {
-    //cout << "Sort called" << endl;
+    //cout << "insertion Sort called" << endl;
     Node* temp;
     Node* previous = head;
     Node* current = head->next;
 
-    //returns automatically if the linked list size is 0 or 1 because it is already sorted
-    if (head->next == nullptr || head == nullptr){
+    //returns automatically if the linked list size is 0 because it is already sorted
+    if (head == nullptr) {
+        return;
+    }
+    //returns automatically if the linked list size is 1 because it is already sorted
+    if (head->next == nullptr) {
         return;
     }
     //while loop- goes through the entire linked list; allows for the every instance to be tested over and over again
@@ -117,7 +121,7 @@ void LinkedList::insertionSort() {
             previous = previous->next;
             current = current->next;
         }
-            //else statement- entered if the current is < than the previous
+        //else statement- entered if the current is < than the previous
         else {
             //if statement- checks to see if the current is < than the head and if it is moves the node to be the head pointer
             if(current->value < head->value){
@@ -126,10 +130,10 @@ void LinkedList::insertionSort() {
                 current->next = head;
                 head = current;
             }
-                //else statement- entered when current is > than the head and the node needs to find its correct location in the list
+            //else statement- entered when current is > than the head and the node needs to find its correct location in the list
             else{
                 temp = head;
-                //while loop- loops through when curr is > the value after temp && when temp is not the last value in the linked list
+                //while loop- loops through when current is > the value after temp && when temp is not the last value in the linked list
                 // then moves temp to the next mode
                 while (current->value > temp->next->value && temp->next != nullptr){
                     temp = temp->next;

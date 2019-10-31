@@ -11,5 +11,4 @@ void insertionSort(vector<int> &a, int n);
 
 
 
-
 #endif //BINARYINSERTIONSORT_H

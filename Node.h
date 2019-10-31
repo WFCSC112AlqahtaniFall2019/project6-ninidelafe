@@ -5,7 +5,6 @@ class Node {
 
 public:
     // Node constructor
-
     Node(int v = 0, Node* n = nullptr)
     {
         value = v;

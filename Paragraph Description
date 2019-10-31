@@ -1,8 +1,11 @@
-In this project we tested which method of sorting would work faster and more efficiently. It was found that when sorting
+In this project I tested which method of sorting would work faster and more efficiently. I found that when sorting
 a vector, the time grew exponentially as the length grew. This was not true for the linked list, the linked list while
 using insertion sort was always finished in less than one second. A possibility for this is because as the length
 increased in a vector it has to be split up into more individual pieces then compared over and over again. While with
 linked list the numbers are already individually allocated but connected with a pointer. Therefore, the location just
 needs to be found and the pointers changed, while for a vector all of the elements need to be shifted for it to work
-properly. Using linked list and insertion sort is a much more efficient way to sort data.
+properly. Using linked list and insertion sort is a much more efficient way to sort data. I also believe that the insertion
+sort for linked lists is much faster because the entire linked list is sent into the function so it is sent into a nested while
+nested with if else loops to quickly sort and organize the linked list. However, when discussed in class I am very worried and
+skeptical on if I did this correctly.
 
