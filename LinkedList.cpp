@@ -49,14 +49,14 @@ LinkedList& LinkedList::operator=(const LinkedList &assign) {
 LinkedList::~LinkedList() {
     //cout << "Destructor called" << endl;
     Node* curr = head;
-    Node* afterCurr = curr->next;
+    Node* afterCurrent = curr->next;
 
     //iterates until curr->next is nullptr to be able to reach the entire list then deletes curr and moves
     // onto the next element in the linked list
     while(curr->next != nullptr){
         delete(curr);
-        curr = afterCurr;
-        afterCurr = afterCurr->next;
+        curr = afterCurrent;
+        afterCurrent = afterCurrent->next;
     }
 
 }
@@ -103,46 +103,46 @@ void LinkedList::insertionSort() {
     //cout << "Sort called" << endl;
     Node* temp;
     Node* previous = head;
-    Node* curr = head->next;
+    Node* current = head->next;
 
     //returns automatically if the linked list size is 0 or 1 because it is already sorted
     if (head->next == nullptr || head == nullptr){
         return;
     }
-    //while loop- goes through the entire linked list
-    while (curr != nullptr){
+    //while loop- goes through the entire linked list; allows for the every instance to be tested over and over again
+    while (current != nullptr){
         //if statement- checks to see if the current is >= than the previous therefore no sorting needing to occur
         // the nodes are moved up to the next nodes
-        if(curr->value >= previous->value){
+        if(current->value >= previous->value){
             previous = previous->next;
-            curr = curr->next;
+            current = current->next;
         }
             //else statement- entered if the current is < than the previous
         else {
             //if statement- checks to see if the current is < than the head and if it is moves the node to be the head pointer
-            if(curr->value < head->value){
-                previous->next = curr->next;
-                curr->next = nullptr;
-                curr->next = head;
-                head = curr;
+            if(current->value < head->value){
+                previous->next = current->next;
+                current->next = nullptr;
+                current->next = head;
+                head = current;
             }
                 //else statement- entered when current is > than the head and the node needs to find its correct location in the list
             else{
                 temp = head;
                 //while loop- loops through when curr is > the value after temp && when temp is not the last value in the linked list
                 // then moves temp to the next mode
-                while (curr->value > temp->next->value && temp->next != nullptr){
+                while (current->value > temp->next->value && temp->next != nullptr){
                     temp = temp->next;
                 }
                 //moves the nodes to the correct locations and disconnects the pointers that are no longer necessary
-                previous->next = curr->next;
-                curr->next = nullptr;
-                curr->next = temp->next;
-                temp->next = curr;
+                previous->next = current->next;
+                current->next = nullptr;
+                current->next = temp->next;
+                temp->next = current;
             }
         }
-        //moves current
-        curr = previous->next;
+        //moves current so that the first while loop can keep going or move out of it
+        current = previous->next;
     }
 }
 

@@ -84,5 +84,6 @@ int main() {
     //Outputs length and times for binary search and insertion sort for graphing and comparison
     //cout << length << " " << elapsed_binaryInsertionSort << " " << elapsed_linkedListInsertionSort << endl;
 
-}
 //}
+    return 0;
+}

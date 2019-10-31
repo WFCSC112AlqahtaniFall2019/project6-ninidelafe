@@ -36,4 +36,5 @@ void insertionSort(vector<int> &a, int n) {
         }
         a[loc] = selected;
     }
+
 }

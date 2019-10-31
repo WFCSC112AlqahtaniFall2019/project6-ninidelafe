@@ -7,6 +7,7 @@
 using namespace std;
 
 class LinkedList {
+
 public:
     LinkedList(); //constructor
     //LinkedList(int leng); //alternative constructor

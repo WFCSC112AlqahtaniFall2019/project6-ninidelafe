@@ -5,3 +5,4 @@ increased in a vector it has to be split up into more individual pieces then com
 linked list the numbers are already individually allocated but connected with a pointer. Therefore, the location just
 needs to be found and the pointers changed, while for a vector all of the elements need to be shifted for it to work
 properly. Using linked list and insertion sort is a much more efficient way to sort data.
+
